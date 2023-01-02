@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #main{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 style="color: green;">Geekster</h1>
+        <h4 >Click On the Buttonto Add Image Element</h4>
+        <button onclick="elementAdd()">click here</button>
+        <h2 id="heading" style="color: green;"></h2>
+    </div>
+    
+
+
+   <script>
+     function elementAdd() {
+            let heading = document.getElementById("heading")
+            heading.innerText="Image Elment Added"
+
+            let image= document.createElement("img")
+            image.src ="Geekster.png"
+            image.style.width="150px"
+            document.getElementById("main").appendChild(image);
+           
+        }
+   </script>
+</body>
+</html>
